@@ -12,3 +12,9 @@ function calculateGoal() {
   sipreq.innerHTML = "₹ " + Math.round(sip).toLocaleString();
 }
 
+// Run default calculation on page load
+window.addEventListener("DOMContentLoaded", () => {
+  calculateGoal();
+});
+
+
