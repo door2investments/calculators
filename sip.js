@@ -1,33 +1,42 @@
 let chart;
 
 function calculateSIP() {
-  let P = +sip.value;
-  let r = rate.value / 12 / 100;
-  let n = years.value * 12;
+  const P = Number(document.getElementById("sip").value);
+  const r = Number(document.getElementById("rate").value) / 12 / 100;
+  const n = Number(document.getElementById("years").value) * 12;
 
-  let fv = P * ((Math.pow(1+r,n)-1)/r) * (1+r);
-  let invested = P * n;
-  let earned = fv - invested;
+  const futureValue = P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+  const investedAmount = P * n;
+  const earnedAmount = futureValue - investedAmount;
 
-  investedEl = Math.round(invested).toLocaleString();
-  earnedEl = Math.round(earned).toLocaleString();
-  totalEl = Math.round(fv).toLocaleString();
+  document.getElementById("invested").innerText =
+    "₹ " + investedAmount.toLocaleString();
 
-  invested.innerHTML = investedEl;
-  earned.innerHTML = earnedEl;
-  total.innerHTML = totalEl;
+  document.getElementById("earned").innerText =
+    "₹ " + Math.round(earnedAmount).toLocaleString();
 
-  if(chart) chart.destroy();
+  document.getElementById("total").innerText =
+    "₹ " + Math.round(futureValue).toLocaleString();
 
-  chart = new Chart(sipChart, {
-    type: 'doughnut',
+  if (chart) chart.destroy();
+
+  chart = new Chart(document.getElementById("sipChart"), {
+    type: "doughnut",
     data: {
-      labels: ['Invested', 'Earned'],
-      datasets: [{
-        data: [invested, earned],
-        backgroundColor: ['#94a3b8','#0f2a44']
-      }]
+      labels: ["Invested", "Earned"],
+      datasets: [
+        {
+          data: [investedAmount, earnedAmount],
+          backgroundColor: ["#94a3b8", "#0f2a44"]
+        }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: "bottom"
+        }
+      }
     }
   });
 }
-
