@@ -75,3 +75,22 @@ window.addEventListener("DOMContentLoaded", () => {
   calculate();     // calculate using default values
 });
 
+let popupShown = sessionStorage.getItem("advisorPopupShown");
+
+function showPopup(prefilledMessage) {
+  if (popupShown) return;
+
+  const phone = "919390250541"; // your WhatsApp number
+  const encodedMsg = encodeURIComponent(prefilledMessage);
+
+  document.getElementById("whatsappLink").href =
+    `https://wa.me/${phone}?text=${encodedMsg}`;
+
+  document.getElementById("advisorPopup").style.display = "flex";
+  sessionStorage.setItem("advisorPopupShown", "true");
+}
+
+function closePopup() {
+  document.getElementById("advisorPopup").style.display = "none";
+}
+
