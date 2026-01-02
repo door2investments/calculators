@@ -111,25 +111,31 @@ input[type=range] {
 
 .toggle {
   display: flex;
-  gap: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  padding: 4px;
   margin-bottom: 20px;
 }
 
 .toggle button {
   flex: 1;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #cbd5e1;
-  background: #f1f5f9;
+  padding: 12px 0;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
   font-weight: 600;
+  font-size: 15px;
+  color: #334155;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .toggle button.active {
   background: #0f2a44;
   color: #ffffff;
-  border-color: #0f2a44;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
+
 
 @media (max-width: 768px) {
   input[type=range] {
@@ -225,6 +231,10 @@ input[type=range] {
     padding: 14px 18px;
     right: 14px;
     bottom: 14px;
+  }
+  .toggle button {
+    font-size: 16px;
+    padding: 14px 0;
   }
 }
 
