@@ -109,6 +109,28 @@ input[type=range] {
   accent-color: #0f2a44;
 }
 
+.toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle button.active {
+  background: #0f2a44;
+  color: #ffffff;
+  border-color: #0f2a44;
+}
+
 @media (max-width: 768px) {
   input[type=range] {
     height: 6px;
