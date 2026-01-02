@@ -2,7 +2,7 @@ function calculateGoal() {
   let G = +goal.value;
   let y = +years.value;
   let inf = +inflation.value/100;
-  let r = +return.value/100/12;
+  let r = +expectedReturn.value/100/12;
   let n = y*12;
 
   let futureGoal = G * Math.pow(1+inf, y);
