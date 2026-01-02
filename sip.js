@@ -14,8 +14,19 @@ function setMode(m) {
 }
 
 function calculate() {
-  if (mode === "sip") calculateSIP();
-  else calculateLumpsum();
+  if (mode === "sip") {
+    calculateSIP();
+    showPopup(
+  `Hi, I calculated my ${mode === "sip" ? "SIP" : "lumpsum"} investment and would like professional advice to achieve my target amount. Please guide me.`
+);
+
+  }
+  else { 
+    calculateLumpsum();
+    showPopup(
+  `Hi, I calculated my ${mode === "sip" ? "SIP" : "lumpsum"} investment and would like professional advice to achieve my target amount. Please guide me.`
+);
+  }
 }
 
 function calculateSIP() {
