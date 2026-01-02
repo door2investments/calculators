@@ -9,8 +9,8 @@ function calculateSIP() {
   let invested = P * n;
   let earned = fv - invested;
 
-  investedEl = invested.toLocaleString();
-  earnedEl = earned.toLocaleString();
+  investedEl = Math.round(invested).toLocaleString();
+  earnedEl = Math.round(earned).toLocaleString();
   totalEl = Math.round(fv).toLocaleString();
 
   invested.innerHTML = investedEl;
