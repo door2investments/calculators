@@ -105,3 +105,9 @@ function closePopup() {
   document.getElementById("advisorPopup").style.display = "none";
 }
 
+setTimeout(() => {
+  showPopup(
+    "Hi, I just used your investment calculator and would like guidance on achieving my goal. Please help me with the right investment strategy."
+  );
+}, 30000);
+
