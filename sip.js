@@ -68,3 +68,10 @@ function updateUI(invested, earned, total) {
     }
   });
 }
+
+// Run default calculation on page load
+window.addEventListener("DOMContentLoaded", () => {
+  setMode("sip");   // ensure SIP is active
+  calculate();     // calculate using default values
+});
+
