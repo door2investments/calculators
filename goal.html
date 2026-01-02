@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goal Planning Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h2>Goal Planning Calculator</h2>
+
+    <label>Goal Amount Today (₹)</label>
+    <input id="goal">
+
+    <label>Years to Goal</label>
+    <input id="years">
+
+    <label>Inflation (%)</label>
+    <input id="inflation">
+
+    <label>Expected Return (%)</label>
+    <input id="return">
+
+    <button onclick="calculateGoal()">Calculate SIP Required</button>
+
+    <div class="stats">
+      <div class="stat"><h3>Future Goal Value</h3><p id="future"></p></div>
+      <div class="stat"><h3>Monthly SIP Required</h3><p id="sipreq"></p></div>
+    </div>
+  </div>
+
+  <footer>
+    Wealth & Investment Advisory | 9390250541<br>
+    Mutual Fund investments are subject to market risks.
+  </footer>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919390250541" target="_blank">WhatsApp Advisor</a>
+
+<script src="goal.js"></script>
+</body>
+</html>
