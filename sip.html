@@ -1,0 +1,25 @@
+<h2>SIP Calculator</h2>
+
+Monthly SIP (₹):
+<input id="sip"><br><br>
+
+Expected Return (%):
+<input id="rate"><br><br>
+
+Years:
+<input id="years"><br><br>
+
+<button onclick="calculateSIP()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calculateSIP() {
+  let P = sip.value;
+  let r = rate.value / 12 / 100;
+  let n = years.value * 12;
+
+  let fv = P * ((Math.pow(1+r,n)-1)/r) * (1+r);
+  result.innerHTML = "Estimated Corpus: ₹ " + Math.round(fv).toLocaleString();
+}
+</script>
