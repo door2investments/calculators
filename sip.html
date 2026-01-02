@@ -1,25 +1,44 @@
-<h2>SIP Calculator</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIP Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
 
-Monthly SIP (₹):
-<input id="sip"><br><br>
+<div class="container">
+  <div class="card">
+    <h2>SIP Calculator</h2>
 
-Expected Return (%):
-<input id="rate"><br><br>
+    <label>Monthly SIP (₹)</label>
+    <input id="sip">
 
-Years:
-<input id="years"><br><br>
+    <label>Expected Return (%)</label>
+    <input id="rate">
 
-<button onclick="calculateSIP()">Calculate</button>
+    <label>Years</label>
+    <input id="years">
 
-<h3 id="result"></h3>
+    <button onclick="calculateSIP()">Calculate</button>
 
-<script>
-function calculateSIP() {
-  let P = sip.value;
-  let r = rate.value / 12 / 100;
-  let n = years.value * 12;
+    <div class="stats">
+      <div class="stat"><h3>Invested</h3><p id="invested"></p></div>
+      <div class="stat"><h3>Earned</h3><p id="earned"></p></div>
+      <div class="stat"><h3>Total Value</h3><p id="total"></p></div>
+    </div>
 
-  let fv = P * ((Math.pow(1+r,n)-1)/r) * (1+r);
-  result.innerHTML = "Estimated Corpus: ₹ " + Math.round(fv).toLocaleString();
-}
-</script>
+    <canvas id="sipChart"></canvas>
+  </div>
+
+  <footer>
+    Wealth & Investment Advisory | 9390250541<br>
+    Mutual Fund investments are subject to market risks.
+  </footer>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919390250541" target="_blank">WhatsApp Advisor</a>
+
+<script src="sip.js"></script>
+</body>
+</html>
