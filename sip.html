@@ -11,14 +11,20 @@
   <div class="card">
     <h2>SIP Calculator</h2>
 
-    <label>Monthly SIP (₹)</label>
-    <input id="sip">
+<label>Monthly SIP (₹)</label>
+<input type="range" min="500" max="100000" step="500" id="sipRange"
+       oninput="sip.value=this.value">
+<input id="sip" value="5000" oninput="sipRange.value=this.value">
 
-    <label>Expected Return (%)</label>
-    <input id="rate">
+<label>Expected Return (%)</label>
+<input type="range" min="6" max="20" step="0.5" id="rateRange"
+       oninput="rate.value=this.value">
+<input id="rate" value="12" oninput="rateRange.value=this.value">
 
-    <label>Years</label>
-    <input id="years">
+<label>Years</label>
+<input type="range" min="1" max="40" step="1" id="yearRange"
+       oninput="years.value=this.value">
+<input id="years" value="15" oninput="yearRange.value=this.value">
 
     <button onclick="calculateSIP()">Calculate</button>
 
