@@ -13,9 +13,14 @@
     <h2>SIP Calculator</h2>
     
 <div class="toggle">
-  <button id="sipBtn" class="active" onclick="setMode('sip')">SIP</button>
-  <button id="lumpBtn" onclick="setMode('lump')">Lumpsum</button>
+  <button type="button" id="sipBtn" class="active" onclick="setMode('sip')">
+    SIP
+  </button>
+  <button type="button" id="lumpBtn" onclick="setMode('lump')">
+    Lumpsum
+  </button>
 </div>
+
 <div id="sipInputs">
   <label>Monthly SIP (₹)</label>
   <input type="range" min="500" max="100000" step="500"
