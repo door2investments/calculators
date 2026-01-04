@@ -189,13 +189,26 @@ input[type=range] {
 
 .popup-close {
   position: absolute;
-  top: 12px;
-  right: 14px;
+  top: 10px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   border: none;
-  background: transparent;
+  background: #f1f5f9;
+  color: #334155;
   font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.popup-close:hover {
+  background: #e2e8f0;
+}
+
 
 @media (max-width: 768px) {
   input[type=range] {
@@ -298,6 +311,16 @@ input[type=range] {
   }
     .popup-card {
     padding: 22px 18px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-card h3 {
+    font-size: 18px;
+  }
+
+  .popup-card p {
+    font-size: 14px;
   }
 }
 

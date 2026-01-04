@@ -1,0 +1,16 @@
+<div class="card">
+  <h2>Future Expense Projection</h2>
+  <p>See how your monthly expenses may grow over time due to inflation.</p>
+
+  <label>Current Monthly Expense (₹)</label>
+  <input id="expense" value="25000">
+
+  <label>Expected Inflation (%)</label>
+  <input id="expenseInflation" value="6">
+
+  <button onclick="calculateExpenseProjection()">
+    Show 30-Year Projection
+  </button>
+
+  <canvas id="expenseChart"></canvas>
+</div>
