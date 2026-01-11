@@ -8,7 +8,7 @@ function calculateGoal() {
   let n = y*12;
 
   let futureGoal = G * Math.pow(1+inf, y);
-  let sip = futureGoal * r / ((Math.pow(1+r,n)-1)*(1+r));
+  let sip = futureGoal * r / ((Math.pow(1+r,n)-1));
   // let sip = futureGoal * r / ((Math.pow(1+r,n)-1)*(1+r));
   
   future.innerHTML = "₹ " + Math.round(futureGoal).toLocaleString();
