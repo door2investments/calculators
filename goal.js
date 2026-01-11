@@ -9,7 +9,8 @@ function calculateGoal() {
 
   let futureGoal = G * Math.pow(1+inf, y);
   let sip = futureGoal * r / ((Math.pow(1+r,n)-1)*(1+r));
-
+  // let sip = futureGoal * r / ((Math.pow(1+r,n)-1)*(1+r));
+  
   future.innerHTML = "₹ " + Math.round(futureGoal).toLocaleString();
   sipreq.innerHTML = "₹ " + Math.round(sip).toLocaleString();
     triggerPopupWithDelay(
