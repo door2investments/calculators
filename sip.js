@@ -40,7 +40,7 @@ const r = Math.pow(1 + annualRate / 100, 1 / 12) - 1;
 
 const fv = P * ((Math.pow(1 + r, n) - 1) / r);
 const invested = P * n;
-const earned = futureValue - invested;
+const earned = fv - invested;
 
   //const fv = P * ((Math.pow(1 + r, n) - 1) / r);
 
