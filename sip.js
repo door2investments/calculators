@@ -39,15 +39,15 @@ const r = (Math.pow(1 + annualRate / 100, 1 / 12) - 1).toFixed(5);
 //const n = years * 12;
 
 const fv = Math.round(P * ((Math.pow(1 + r, n) - 1) / r));
-const invested = Math.round(P * n);
-const earned = Math.round(fv - invested);
+const invested = P * n;
+const earned = fv - invested;
 
   //const fv = P * ((Math.pow(1 + r, n) - 1) / r);
 
   //const invested = P * n;
   //const earned = fv - invested;
 
-  updateUI(invested, earned, fv);
+  updateUI(Math.round(invested).toLocaleString("en-IN"), Math.round(earned).toLocaleString("en-IN"), fv.toLocaleString("en-IN"));
 }
 
 function calculateLumpsum() {
