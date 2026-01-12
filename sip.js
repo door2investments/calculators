@@ -47,7 +47,7 @@ const earned = fv - invested;
   //const invested = P * n;
   //const earned = fv - invested;
 
-  updateUI(Math.round(invested).toLocaleString("en-IN"), Math.round(earned).toLocaleString("en-IN"), fv.toLocaleString("en-IN"));
+  updateUI(Math.round(invested).toLocaleString("en-IN"), Math.round(earned), fv);
 }
 
 function calculateLumpsum() {
