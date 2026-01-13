@@ -7,13 +7,17 @@ function calculateGoal() {
   let annualRate = +expectedReturn.value;
   let n = y*12;
 
-  const r = Math.pow(1 + annualRate / 100, 1 / 12) - 1;
+  // const r = Math.pow(1 + annualRate / 100, 1 / 12) - 1;
+  const r = annualRate/12/100;
 //const n = years * 12;
 
   let futureGoal = G * Math.pow(1+inf, y);
-  const sip = futureGoal * r / (Math.pow(1 + r, n) - 1);
+  // const sip = futureGoal * r / (Math.pow(1 + r, n) - 1);
   //let sip = futureGoal * r / ((Math.pow(1+r,n)-1));
   // let sip = futureGoal * r / ((Math.pow(1+r,n)-1)*(1+r));
+  const sip =
+    (goalAmount * r) /
+    ((1 + r) * (Math.pow(1 + r, n) - 1));
   
   future.innerHTML = "₹ " + Math.round(futureGoal).toLocaleString();
   sipreq.innerHTML = "₹ " + Math.round(sip).toLocaleString();
