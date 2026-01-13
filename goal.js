@@ -22,7 +22,7 @@ function calculateGoal() {
   future.innerHTML = "₹ " + Math.round(futureGoal).toLocaleString();
   sipreq.innerHTML = "₹ " + Math.round(sip).toLocaleString();
     triggerPopupWithDelay(
-      `Hi, I calculated my ${mode === "sip" ? "SIP" : "lumpsum"} investment and would like professional advice to achieve my target amount. Please guide me.`
+      `Hi, I calculated my investment and would like professional advice to achieve my target amount. Please guide me.`
     );
 }
 
