@@ -16,7 +16,7 @@ function calculateGoal() {
   //let sip = futureGoal * r / ((Math.pow(1+r,n)-1));
   // let sip = futureGoal * r / ((Math.pow(1+r,n)-1)*(1+r));
   const sip =
-    (goalAmount * r) /
+    (futureGoal * r) /
     ((1 + r) * (Math.pow(1 + r, n) - 1));
   
   future.innerHTML = "₹ " + Math.round(futureGoal).toLocaleString();
