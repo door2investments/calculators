@@ -35,10 +35,13 @@ function calculateSIP() {
   const annualRate = Number(document.getElementById("rate").value);
   const n = Number(document.getElementById("years").value) * 12;
 
-const r = Number((Math.pow(1 + annualRate / 100, 1 / 12) - 1));
-//const n = years * 12;
+// const n = years * 12;
+const r = annualRate / 12 / 100; // 0.01
 
-const fv = Math.round(P * ((Math.pow(1 + r, n) - 1) / r));
+const fvRaw =
+  P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+
+const fv = Math.round(fvRaw);
 const invested = Math.round(P * n);
 const earned = fv - invested;
 
