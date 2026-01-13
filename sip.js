@@ -35,7 +35,7 @@ function calculateSIP() {
   const annualRate = Number(document.getElementById("rate").value);
   const n = Number(document.getElementById("years").value) * 12;
 
-const r = Number((Math.pow(1 + annualRate / 100, 1 / 12) - 1).toFixed(5));
+const r = Number((Math.pow(1 + annualRate / 100, 1 / 12) - 1));
 //const n = years * 12;
 
 const fv = Math.round(P * ((Math.pow(1 + r, n) - 1) / r));
